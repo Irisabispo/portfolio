@@ -15,13 +15,13 @@ ul {
 }
 
 header {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  padding: 40px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: transparent;
   backdrop-filter: blur(5px);
   border-bottom: 1px solid;
@@ -43,36 +43,64 @@ header a:hover {
   border-radius: 55px;
 }
 header .navbar {
-  display: flex;
-  width: auto;
-  padding: 1rem 2rem;
-  background-color: rgba(11, 9, 11, 0);
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  flex-direction: column;
   font-weight: bold;
 }
-header .navbar ul {
+header .navbar .navbar.ativo {
   display: flex;
-  gap: 2rem;
+}
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+header .navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+header .navbar .navbar a:hover {
+  color: #ff006e;
 }
 
 .menu-hamburguer {
-  display: none; /*esconde o botão no pc*/
-  gap: 1rem;
+  display: flex;
+  gap: 0.5rem;
   flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 101;
 }
 .menu-hamburguer span {
   width: 25px;
   height: 3px;
-  background-color: #f472b6;
-  border-radius: 400px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: #0e0e0e;
   font-family: "DM Sans", sans-serif;
   color: #d4b8a0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .hero {
@@ -944,7 +972,7 @@ footer .icons {
 .footer__signature {
   margin-top: 1 rem;
   font-family: "DM Sans", sans-serif;
-  font-size: 10rem;
+  font-size: 2rem;
   color: white;
 }
 
