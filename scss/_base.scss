@@ -7,10 +7,36 @@
 }
 
 body {
-    background: $cor-principal;
+    --bg: #000000;
+    --text: #ffffff;
+    --heading: #ffffff;
+    --nav-link: #fbcfe8;
+    --nav-hover: #ff006e;
+    --surface: rgba(26, 26, 26, 0.8);
+    --surface-border: rgba(255, 255, 255, 0.12);
+    --button-color: #ffffff;
+    background: var(--bg);
     font-family: $fonte-texto;
-    color: $cor-texto;
+    color: var(--text);
     font-size: 16px;
     line-height: 1.6;
-
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body.theme-light {
+    --bg: #f4f4f4;
+    --text: #000000;
+    --heading: #000000;
+    --nav-link: #2a2a2a;
+    --nav-hover: #d14d96;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-border: rgba(31, 20, 27, 0.12);
+    --button-color: #000000;
+}
+
+h1,
+h2,
+p {
+    color: var(--text);
+}
+

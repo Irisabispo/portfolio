@@ -19,12 +19,13 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  gap: 1rem;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: transparent;
+  background: rgba(17, 17, 17, 0.35);
   backdrop-filter: blur(5px);
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--surface-border);
 }
 header .logo {
   color: rgb(222, 68, 184);
@@ -32,48 +33,66 @@ header .logo {
   font-family: "Source Code Pro", monospace;
 }
 header .logo-nome {
-  color: rgb(249, 248, 248);
+  color: var(--heading);
 }
 header a {
-  color: #fbcfe8;
+  color: var(--nav-link);
   padding: 10px;
 }
 header a:hover {
-  background-color: rgb(211, 90, 157);
+  background-color: rgba(211, 90, 157, 0.18);
   border-radius: 55px;
 }
 header .navbar {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background-color: #1a1a1a;
-  flex-direction: column;
-  font-weight: bold;
-}
-header .navbar .navbar.ativo {
   display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: static;
+  padding: 0;
+  background: transparent;
+  font-weight: bold;
 }
 header .navbar ul {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 header .navbar a {
-  color: #fff;
+  color: var(--heading);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
-header .navbar .navbar a:hover {
-  color: #ff006e;
+header .navbar a:hover {
+  color: var(--nav-hover);
+}
+
+body.theme-light header {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--button-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .menu-hamburguer {
-  display: flex;
+  display: none;
   gap: 0.5rem;
   flex-direction: column;
   background: none;
@@ -84,7 +103,7 @@ header .navbar .navbar a:hover {
 .menu-hamburguer span {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--button-color);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -96,16 +115,42 @@ header .navbar .navbar a:hover {
 }
 
 body {
-  background: #0e0e0e;
+  --bg: #000000;
+  --text: #ffffff;
+  --heading: #ffffff;
+  --nav-link: #fbcfe8;
+  --nav-hover: #ff006e;
+  --surface: rgba(26, 26, 26, 0.8);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  --button-color: #ffffff;
+  background: var(--bg);
   font-family: "DM Sans", sans-serif;
-  color: #d4b8a0;
+  color: var(--text);
   font-size: 16px;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.theme-light {
+  --bg: #f4f4f4;
+  --text: #000000;
+  --heading: #000000;
+  --nav-link: #2a2a2a;
+  --nav-hover: #d14d96;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-border: rgba(31, 20, 27, 0.12);
+  --button-color: #000000;
+}
+
+h1,
+h2,
+p {
+  color: var(--text);
 }
 
 .hero {
   min-height: 100vh;
-  background-color: rgb(3, 3, 3);
+  color: #0e0e0e;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -113,7 +158,6 @@ body {
   align-items: center;
   overflow: visible;
   padding: 130px 4rem 2rem 4rem;
-  background: linear-gradient(135deg, #f472b6, #a8a8b0, #9bc5ef);
 }
 .hero h1 {
   font-size: 4.5rem;
@@ -149,53 +193,6 @@ body {
   max-width: 600px;
 }
 
-/*
-.hero-texto h1 {
-    display: inline-block;
-    padding: 18px 32px;
-
-    background: rgba(255, 255, 255, 0.067);
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-
-    border: 1px solid rgba(255,255,255,.12);
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.35),
-        0 0 25px rgba(232,162,184,.20);
-
-    transition: .35s;
-
-}*/
-.hero-texto h1:hover {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45), 0 0 40px rgba(232, 162, 184, 0.35);
-  transform: translateY(-3px);
-}
-
-@keyframes cair {
-  from {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes balancear {
-  0% {
-    transform: rotate(-1deg);
-  }
-  50% {
-    transform: rotate(1deg);
-  }
-  100% {
-    transform: rotate(-1deg);
-  }
-}
 .cracha {
   border-top: 8px solid #f472b6;
   animation: cair 0.8s ease forwards, balancear 4s ease-in-out 0.8s infinite;
@@ -229,6 +226,27 @@ body {
   transform: translateX(-50%);
   background: #f472b6;
   border-radius: 2px;
+}
+@keyframes cair {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes balancear {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
 }
 .cracha img {
   width: 180px;
@@ -271,7 +289,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
-  background-color: #ef84ab;
+  color: #0e0e0e;
   padding: 5rem;
   overflow: hidden;
   color: #2d1b25;
@@ -295,9 +313,11 @@ body {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #2d1b25;
 }
 .sobre p {
   line-height: 1.8;
+  color: #2d1b25;
 }
 .sobre article {
   border-top: 4px solid #b08aa0;
@@ -326,6 +346,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10rem;
+  color: #0e0e0e;
 }
 .habilidades h2 {
   text-align: center;
@@ -444,7 +465,7 @@ body {
     margin-left: auto;
   }
   .navbar {
-    display: none !important; /*esconde a navbar no celular*/
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
@@ -453,7 +474,7 @@ body {
     box-sizing: border-box;
   }
   .navbar.ativo {
-    display: flex !important; /*mostra a navbar quando o botão é clicado*/
+    display: flex !important;
   }
   header .navbar ul {
     display: flex;
@@ -571,18 +592,19 @@ body {
 }
 .projetos {
   padding: 2rem;
+  color: #0e0e0e;
 }
 .projetos .projetos-track {
   overflow-x: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
   width: 100%;
 }
 .projetos .projeto-card {
-  width: clamp(280px, 40vw, 440px);
+  width: clamp(340px, 44vw, 520px);
   flex-shrink: 0;
   background: #1e1e1e;
   border-radius: 12px;
@@ -617,7 +639,7 @@ body {
   margin-left: 0.5rem;
 }
 .projetos .projeto-card .card-body {
-  padding: 1.5rem;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -639,7 +661,7 @@ body {
 }
 .projetos .projeto-card .card-body .card-preview {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   object-position: top;
   border-radius: 8px;
@@ -659,6 +681,23 @@ body {
 .projetos .projeto-card .card-body .card-links a:hover {
   opacity: 0.7;
 }
+.projetos .projeto-card .card-body .card-descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 0.3rem 0 0.5rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid #f472b6;
+  border-radius: 4px;
+}
+.projetos .projeto-card .card-body .card-descricao p {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #d4d4d4;
+  margin: 0;
+}
 .projetos h2 {
   font-family: "Source Code Pro", monospace;
   font-size: 3rem;
@@ -671,7 +710,7 @@ body {
 
 .contato {
   padding: 8rem 2rem;
-  background: #1a1a1a;
+  color: #0e0e0e;
   position: relative;
   overflow: hidden;
 }
@@ -743,19 +782,6 @@ body {
     box-shadow: 0 0 0 0 rgba(61, 255, 135, 0);
   }
 }
-.contato__cargo {
-  margin-bottom: 1.5rem;
-  color: #d4b8a0;
-  font-size: 0.95rem;
-}
-
-.contato__title {
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
 .contato__descricao {
   max-width: 55ch;
   margin-bottom: 2rem;
@@ -903,6 +929,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 5rem 1.5rem;
+  color: #0e0e0e;
 }
 
 .board-display {

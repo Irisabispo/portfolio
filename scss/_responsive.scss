@@ -4,44 +4,38 @@
 @media (max-width: 768px) {
 
     header {
-        
-    height: 70px;
-    padding: 0 1rem;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+        height: 70px;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
-    
+
     .logo {
         font-size: 1.2rem;
         flex: 1;
         min-width: 0;
     }
+
     .menu-hamburguer {
         display: flex;
-        margin-left: auto; 
+        margin-left: auto;
     }
 
     .navbar {
-        display: none !important; /*esconde a navbar no celular*/
-
+        display: none !important;
         position: absolute;
         top: 100%;
         left: 0;
-
         width: 100%;
-        
         padding: 1.5rem;
-        
         box-sizing: border-box;
     }
 
     .navbar.ativo {
-        display: flex !important; /*mostra a navbar quando o botão é clicado*/
+        display: flex !important;
     }
-    
+
     header .navbar ul {
         display: flex;
         flex-direction: column;

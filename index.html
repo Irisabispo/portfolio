@@ -25,14 +25,9 @@
     <!--navbar-->
     <header> 
         <h2 class="logo">
-            //<span class="logo-nome">maruyami</span>
+            //<span class="logo-nome">IB</span>
         </h2>
-            <!--menu hamburguinho-->
-        <button class="menu-hamburguer">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+
         <nav class="navbar"> 
             <ul>
                 <li><a href="#hero">Início</a></li>
@@ -40,8 +35,20 @@
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li>
+                    <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+                        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+                    </button>
+                </li>
             </ul>
-        </nav>  
+        </nav>
+
+        <!--menu hamburguinho-->
+        <button class="menu-hamburguer" type="button" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main>
@@ -178,12 +185,10 @@
                 </article>
                 </div>
         </section>
-
-        <!--meus projetos-->
-        <section id="projetos" class="projetos">
+            <!--meus projetos-->
+            <section id="projetos" class="projetos">
                 <h2>Meus Projetos</h2>
-                <div class="projetos-track">
-
+                    <div class="projetos-track">
                         <article class="projeto-card">
                             <div class="card-header">
                                 <span class="dot vermelho"></span>
@@ -196,55 +201,56 @@
                                 <p class="comentario">// Landing Page - Psicóloga Flávia</p>
                                 <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS']</span>;</p>
                                 <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'Netlify'</span>;</p>
+                                <div class="card-descricao">
+                                    <p>
+                                        A cliente tinha somente Instagram pra divulgar o trabalho dela, sem site, sem lugar
+                                        pra quem procurava atendimento entender quem ela era antes de marcar
+                                        uma consulta. Entrei em contato oferecendo o projeto, ela topou na
+                                        hora. Levantei o conteúdo a partir do que ela já compartilhava
+                                        publicamente e organizei em seções claras, com formulário de
+                                        agendamento e botão fixo de WhatsApp pra
+                                        encurtar o caminho até a primeira sessão.
+                                    </p>
+                                </div>
                                 <div class="card-links">
                                     <a href="https://psicologa-flavia.netlify.app/" target="_blank">&gt; Ver Projeto ↗</a>
                                     <a href="https://github.com/Irisabispo/psicologa-flavia" target="_blank">&gt; Ver GitHub ↗</a>
                                 </div>
                             </div>
                         </article>
-
-                        <!--QUANDO TIVER UM SEGUNDO PROJETO, COLOQUE O CONTEÚDO DENTRO DESSE ARTICLE ABAIXO-->
-                        <article class="projeto-card">
+                            <!--QUANDO TIVER UM SEGUNDO PROJETO, COLOQUE O CONTEÚDO DENTRO DESSE ARTICLE ABAIXO-->
+                        <!--<article class="projeto-card">
                             <div class="card-header">
                                 <span class="dot vermelho"></span>
                                 <span class="dot amarelo"></span>
                                 <span class="dot verde"></span>
-                                <span class="card-filename">EM BREVE</span>
+                                <span class="card-filename">psicologa-flavia.netlify.app</span>
                             </div>
                             <div class="card-body">
-                                <img src="./assets/images/" alt="" class="card-preview">
-                                <p class="comentario">// MAIS UM PROJETO</p>
-                                <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', '', '']</span>;</p>
-                                <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'NÃO DEFINIDO'</span>;</p>
+                                <img src="./assets/images/landing-page-psi.webp" alt="Preview Landing Page Flávia" class="card-preview">
+                                <p class="comentario">// Landing Page - Psicóloga Flávia</p>
+                                <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS']</span>;</p>
+                                <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'Netlify'</span>;</p>
+
+                                <div class="card-descricao">
+                                    <p>
+                                        Ela só tinha o Instagram pra divulgar o trabalho — sem site, sem lugar
+                                        pra quem procurava atendimento entender quem ela era antes de marcar
+                                        uma consulta. Entrei em contato oferecendo o projeto, ela topou na
+                                        hora. Levantei o conteúdo a partir do que ela já compartilhava
+                                        publicamente e organizei em seções claras, com formulário de
+                                        agendamento e botão fixo de WhatsApp por iniciativa própria pra
+                                        encurtar o caminho até a primeira sessão.
+                                    </p>
+                                </div>
                                 <div class="card-links">
-                                    <a href="" target="_blank">&gt; Ver Projeto ↗</a>
-                                    <a href="" target="_blank">&gt; Ver GitHub ↗</a>
+                                    <a href="https://psicologa-flavia.netlify.app/" target="_blank">&gt; Ver Projeto ↗</a>
+                                    <a href="https://github.com/Irisabispo/psicologa-flavia" target="_blank">&gt; Ver GitHub ↗</a>
                                 </div>
                             </div>
-                        </article>
-
-                        <!--TERCEIRO PROJETO-->
-                            <article class="projeto-card">
-                            <div class="card-header">
-                                <span class="dot vermelho"></span>
-                                <span class="dot amarelo"></span>
-                                <span class="dot verde"></span>
-                                <span class="card-filename">AGUARDE</span>
-                            </div>
-                            <div class="card-body">
-                                <img src="" alt="" class="card-preview">
-                                <p class="comentario">// </p>
-                                <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['', '', '']</span>;</p>
-                                <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">''</span>;</p>
-                                <div class="card-links">
-                                    <a href="" target="_blank">&gt; Ver Projeto ↗</a>
-                                    <a href="" target="_blank">&gt; Ver GitHub ↗</a>
-                                </div>
-                            </div>
-                        </article>  
-                </div>
-        </section>
-
+                        </article>-->
+                    </div>
+            </section>
 <!--CONTATO - essa seção é o ponto final do portfolio-->
 <section id="contato" class="contato">
     <!--container central-->
@@ -261,10 +267,6 @@
             <li>
                 <span class="status-dot"></span>
                 Aberta para colaborações
-            </li>
-            <li>
-                <span class="status-dot"></span>
-                Aprendendo todos os dias
             </li>
         </ul>
 
@@ -324,9 +326,6 @@
             </a>
         </nav>
 
-
-
-
         <div class="terminal__output">
             <!--js escreve aqui-->
         </div>
@@ -349,7 +348,7 @@
         </div>-->
 
         <p class="footer__signature">
-            //maruyami
+            //Iris Bispo
         </p>
 
         <nav class="icons" aria-label="Redes Sociais">

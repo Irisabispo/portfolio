@@ -2,14 +2,47 @@
 const btn = document.querySelector(".menu-hamburguer");
 const menu = document.querySelector(".navbar");
 
-btn.addEventListener("click", () => {
-    btn.classList.toggle("ativo");
-    menu.classList.toggle("ativo");
-});
+if (btn && menu) {
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("ativo");
+        menu.classList.toggle("ativo");
+    });
+}
+
+const themeToggle = document.querySelector(".theme-toggle");
+const themeIcon = document.querySelector(".theme-toggle__icon");
+
+const applyTheme = (theme) => {
+    const isLight = theme === "light";
+    document.body.classList.toggle("theme-light", isLight);
+
+    if (themeToggle) {
+        themeToggle.setAttribute("aria-pressed", String(isLight));
+    }
+
+    if (themeIcon) {
+        themeIcon.textContent = isLight ? "☀" : "☾";
+    }
+
+    localStorage.setItem("theme", theme);
+};
+
+if (themeToggle && themeIcon) {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersLightTheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initialTheme = savedTheme || (prefersLightTheme ? "light" : "dark");
+
+    applyTheme(initialTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.classList.contains("theme-light") ? "dark" : "light";
+        applyTheme(nextTheme);
+    });
+}
 
 //esse é o bloco do terminal**
 const mensagens = [
-    "$ cat notes.md",
+    "$ ib notes.md",
     "Nem toda ideia nasce pronta.",
     "Algumas precisam de café.",
     "Outras, de tereré.",

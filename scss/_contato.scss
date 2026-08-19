@@ -3,12 +3,11 @@
 .contato {
     //espaço 8 em cima e embaixo e 2 nas laterais
     padding: 8rem 2rem;
-    background: #1a1a1a;
+    color: $cor-principal;
     //necessario para posicionar elementos absolutos
     position: relative;
     //nada pode vazar da seção
     overflow: hidden; 
-
 }
 
 .contato__container {
@@ -44,21 +43,13 @@
     display: inline-flex;
     align-items: center;
     gap: .5rem;
-
     padding: .55rem 1rem;
-
     margin-bottom: .8rem;
-
     border-radius: 999px;
-
     color: #fff;
-
     font-family: 'Courier New', Courier, monospace;
-    
     font-size: .9rem;
-
     letter-spacing: .08rem;
-
     background: linear-gradient(
         135deg,
         rgba(255, 120, 220, .25),
@@ -69,15 +60,12 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: .35s ease;
-
     position: relative;
     overflow: hidden;
 }
 
-
 .contato__tag:hover {
     transform: translateY(-3px);
-
     box-shadow: 
     0 0 15px rgba(190, 120, 255, .30),
     0 0 35px rgba(255, 120, 220, .18);
@@ -120,21 +108,6 @@
 }
 
 
-//identidade da Doroteia
-.contato__cargo {
-
-    margin-bottom: 1.5rem;
-    color: #d4b8a0;
-    font-size: .95rem;
-}
-
-.contato__title {
-    margin-bottom: 1rem;
-    //clamp é: nunca menor que 2rem, tenta usar 4vw e nunca maior que 3rem
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    line-height: 1.1;
-}
 
 .contato__descricao {
     //ch é o tamanho médio de um caractere, 55 caracteres

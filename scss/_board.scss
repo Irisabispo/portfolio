@@ -5,6 +5,7 @@
     display: flex; // transforma a section em um flexbox
     justify-content: center; //centraliza horizontalmente
     padding: 5rem 1.5rem; // espaço acima e abaixo da section
+    color: $cor-principal;
 }
 
 .board-display {
@@ -23,32 +24,21 @@
 .board-display::before {
     content: "● ● ●   terminal";
     display: block;
-
     padding: .9rem 1rem;
-
     background: #222;
-
     color: #888;
-
     font-family: $fonte-codigo;
-
     font-size: .85rem;
 }
 
 // animar o <p> quando o texto  mudar visualmente
 #board-text {
     padding: 2rem;
-
     color: #f472b6;
-
     font-family: $fonte-codigo;
-
     font-size: 1.1rem;
-
     line-height: 1.8;
-
     min-height: 320px;
-    
     white-space: pre-line; // mantem os espaços e quebras de linha do texto
 }
 

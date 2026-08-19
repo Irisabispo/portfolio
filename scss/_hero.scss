@@ -1,23 +1,16 @@
 @use 'variables' as *;
 
-
 .hero {
     min-height: 100vh;
-    background-color: rgb(3, 3, 3);
+    color: $cor-principal;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 8rem;
     align-items: center;
     overflow: visible;
-    
     padding: 130px 4rem 2rem 4rem;
-
-    background: linear-gradient(
-        135deg,
-        #f472b6,
-        #a8a8b0,
-        #9bc5ef);
+    
 
     h1 {
         font-size: 4.5rem;
@@ -59,51 +52,6 @@
     text-align: left;
     max-width: 600px;
 }
-/*
-.hero-texto h1 {
-    display: inline-block;
-    padding: 18px 32px;
-
-    background: rgba(255, 255, 255, 0.067);
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-
-    border: 1px solid rgba(255,255,255,.12);
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.35),
-        0 0 25px rgba(232,162,184,.20);
-
-    transition: .35s;
-
-}*/
-
-.hero-texto h1:hover{
-box-shadow:
-        0 10px 40px rgba(0,0,0,.45),
-        0 0 40px rgba(232,162,184,.35);
-
-    transform: translateY(-3px);
-}
-
-@keyframes cair {
-    from {
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes balancear {
-                0%   { transform: rotate(-1deg); }
-                50%  { transform: rotate(1deg);  }
-                100% { transform: rotate(-1deg); }
-}
 
 .cracha {
     border-top: 8px solid $cor-destaque;
@@ -144,6 +92,22 @@ box-shadow:
             
             background: $cor-destaque;
             border-radius: 2px;           
+}
+
+@keyframes cair {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes balancear {
+                0%   { transform: rotate(-1deg); }
+                50%  { transform: rotate(1deg);  }
+                100% { transform: rotate(-1deg); }
 }
 
     img {

@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
-    background-color: $fundo-sobre;
+    color: $cor-principal;
     padding: 5rem;
     overflow: hidden;
     color: $cor-texto-escuro;
@@ -35,10 +35,12 @@
         font-size: 3rem;
         margin-bottom: 1rem;
         font-weight: 700;
+        color: $cor-texto-escuro;
     }
 
     p {
         line-height: 1.8;
+        color: $cor-texto-escuro;
     }
 
     article {
