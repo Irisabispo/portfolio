@@ -66,42 +66,26 @@ const mensagens = [
 ];
 
 const boardText = document.getElementById("board-text");
-
 let linhaAtual = 0; //digita a primeira linha
 let letraAtual = 0; //posição da letra na linha
-
 let textoCompleto = "";
 
 function digitar() {
 
     const mensagem = mensagens[linhaAtual];
-
     if (letraAtual < mensagem.length) {
-
         textoCompleto += mensagem.charAt(letraAtual);
-
         boardText.textContent = textoCompleto;
-
         letraAtual++;
-
         setTimeout(digitar, 40 + Math.random() * 60);
-
     } else {
-
         textoCompleto += "\n";
-
         boardText.textContent = textoCompleto;
-
         linhaAtual++;
-
         letraAtual = 0;
-
         if (linhaAtual < mensagens.length) {
-
             setTimeout(digitar, 350);
-
         } else {
-
             setTimeout(reiniciarTerminal, 3000);   
         }
     } 
@@ -110,45 +94,26 @@ function digitar() {
 digitar();
 
 function reiniciarTerminal() {
-
     textoCompleto = ""; //esvazia o terminal
-
     linhaAtual = 0; //volta pra primeira linha
-
     letraAtual = 0; //volta pra primeira letra da primeira linha
-
     boardText.textContent = ""; //limpa o <p> na tela
-
     digitar(); //começa tudo novamente
 }
-
-
 //efeito dos cards**
 // a luz quando o mouse passa nos cards de habilidades
 const cards = document.querySelectorAll(".skill-card");
 
 cards.forEach((card) => {
-
     card.addEventListener("mousemove", (event) => {
-
         const rect = card.getBoundingClientRect();
-
         const x = event.clientX - rect.left;
-
         const y = event.clientY - rect.top;
-
         card.style.setProperty("--x", `${x}px`);
         card.style.setProperty("--y", `${y}px`);
-
     }); 
 
 });
 
-
-
-
 //ano dinâmico do footer**
 document.getElementById("year").textContent = new Date().getFullYear();
-
-
-        
