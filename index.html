@@ -31,10 +31,10 @@
         <nav class="navbar"> 
             <ul>
                 <li><a href="#hero">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#curriculo">Currículo</a></li>
                 <li>
                     <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
                         <span class="theme-toggle__icon" aria-hidden="true">☾</span>
@@ -42,7 +42,6 @@
                 </li>
             </ul>
         </nav>
-
         <!--menu hamburguinho-->
         <button class="menu-hamburguer" type="button" aria-label="Abrir menu">
             <span></span>
@@ -50,18 +49,17 @@
             <span></span>
         </button>
     </header>
-
     <main>
         <!--hero-->
         <section id="hero" class="hero"> 
             <div class="hero-conteudo">
                 <div class="avatar-wrapper">
                     <span class="avatar-pulso"></span>
-                    <img src="./assets/images/iris-portfolio-hero.webp" alt="Foto de Iris Bispo" class="avatar-foto">
+                    <img src="./assets/images/portfolio.png" alt="Foto de Iris Bispo" class="avatar-foto">
                 </div>
                 <p class="hero-saudacao">Olá, eu sou</p>
                 <h1 class="hero-nome">Iris Bispo</h1>
-                <p class="hero-cargo">Desenvolvedora Front-End Júnior</p>
+                <p class="hero-cargo">Estudante & Desenvolvedora em Formação</p>
 
         <div class="hero-botoes">
             <a href="https://www.linkedin.com/in/iris-bispo" target="_blank" class="btn-social">
@@ -76,148 +74,39 @@
             </div>
         </section>
 
-        <!--sobre-->
-    <section id="sobre" class="sobre">
-        <h2>Sobre <span class="destaque">{mim}</span></h2>
-                
-        <div class="skills-marquee">
-            <div class="skills-track">
-                <span class="skill-item">HTML</span>
-                <span class="skill-item">CSS</span>
-                <span class="skill-item">SCSS</span>
-                <span class="skill-item">JavaScript</span>
-                <span class="skill-item">Git</span>
-                <span class="skill-item">GitHub</span>
-                <span class="skill-item">Netlify</span>
-                <span class="skill-item">Vercel</span>
-
-                <span class="skill-item">HTML</span>
-                <span class="skill-item">CSS</span>
-                <span class="skill-item">SCSS</span>
-                <span class="skill-item">JavaScript</span>
-                <span class="skill-item">Git</span>
-                <span class="skill-item">GitHub</span>
-                <span class="skill-item">Netlify</span>
-                <span class="skill-item">Vercel</span>
-            </div>
-        </div>
-
-        <div class="sobre-texto">
-        <p>
-            <!-- escreve aqui quem você é, sua faculdade, o que te motiva — você mesma traz depois -->
-        </p>
-    </div>
-
-    <div class="status-bar">
-        <span class="status-pill">Disponível para trabalho freelance</span>
-        <span class="status-pill">Aberta para colaborações</span>
-        <span class="status-pill">Sempre em busca de aprender mais</span>
-    </div>
-
-    <div class="aprontando">
-        <h3>O que eu estou aprontando agora?</h3>
-        <p>
-            <!-- seus projetos atuais reais aqui -->
-        </p>
-    </div>
-</section>        
-
-        <!--habilidades-->
-        <section id="habilidades" class="habilidades">
-            <h2>Minhas Habilidades</h2>
-                <div class="skills-grid">
-                <article class="skill-card">
-                <h3>Tecnologias</h3>
-                    <ul class="skill-icons">
-                        
-                        <li>
-                            <img src="./assets/icons/html.svg" alt="HTML">
-                            <span>HTML5</span>
-                        </li>
-
-                        <li>
-                            <img src="./assets/icons/css.svg" alt="CSS">
-                            <span>CSS3</span>
-                        </li>
-
-                        <li>
-                            <img src="./assets/icons/sass.svg" alt="SCSS">
-                            <span>SCSS</span>
-                        </li>
-                    </ul>
-                </article>
-                
-                <article class="skill-card">
-                    <h3>Ferramentas</h3>
-                    <ul class="skill-icons">
-                        <li>
-                            <img src="./assets/icons/git.svg" alt="Git">
-                            <span>Git</span>
-                        </li>
-
-                        <li>
-                            <img src="./assets/icons/github.svg" alt="GitHub">
-                            <span>GitHub</span>
-                        </li>
-
-                        <li>
-                            <img src="./assets/icons/vscode.svg" alt="VS Code">
-                            <span>VS Code</span>
-                        </li>
-                    </ul>
-                </article>
-
-                <!--lista de ainda aprendendo-->
-                <article class="skill-card">
-                    <h3>Estudando</h3>
-                        <ul class="skill-icons">
-
-                            <li>
-                                <img src="./assets/icons/mysql.svg" alt="ícone de golfinho">
-                                <span>MySQL</span>
-                            </li>
-
-                            <li>
-                                <img src="./assets/icons/javascript.svg" alt="ícone do JavaScript">
-                                <span>JavaScript</span>
-                            </li>
-                        </ul>
-                </article>
-                </div>
-        </section>
-            <!--meus projetos-->
-            <section id="projetos" class="projetos">
-                <h2>Meus Projetos</h2>
-                    <div class="projetos-track">
-                        <article class="projeto-card">
-                            <div class="card-header">
-                                <span class="dot vermelho"></span>
-                                <span class="dot amarelo"></span>
-                                <span class="dot verde"></span>
-                                <span class="card-filename">psicologa-flavia.netlify.app</span>
+        <!--meus projetos-->
+        <section id="projetos" class="projetos">
+            <h2>meus projetos</h2>
+            <div class="projetos-track">
+                <article class="projeto-card">
+                    <div class="card-header">
+                        <span class="dot vermelho"></span>
+                        <span class="dot amarelo"></span>
+                        <span class="dot verde"></span>
+                        <span class="card-filename">psicologa-flavia.netlify.app</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="./assets/images/landing-page-psi.webp" alt="Preview Landing Page Flávia" class="card-preview">
+                            <p class="comentario">// Landing Page - Psicóloga Flávia</p>
+                            <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS']</span>;</p>
+                            <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'Netlify'</span>;</p>
+                            <div class="card-descricao">
+                                <p>
+                                    A cliente tinha somente Instagram pra divulgar o trabalho dela, sem site, sem lugar
+                                    pra quem procurava atendimento entender quem ela era antes de marcar
+                                    uma consulta. Entrei em contato oferecendo o projeto, ela topou na
+                                    hora. Levantei o conteúdo a partir do que ela já compartilhava
+                                    publicamente e organizei em seções claras, com formulário de
+                                    agendamento e botão fixo de WhatsApp pra
+                                    encurtar o caminho até a primeira sessão.
+                                </p>
                             </div>
-                            <div class="card-body">
-                                <img src="./assets/images/landing-page-psi.webp" alt="Preview Landing Page Flávia" class="card-preview">
-                                <p class="comentario">// Landing Page - Psicóloga Flávia</p>
-                                <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS']</span>;</p>
-                                <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'Netlify'</span>;</p>
-                                <div class="card-descricao">
-                                    <p>
-                                        A cliente tinha somente Instagram pra divulgar o trabalho dela, sem site, sem lugar
-                                        pra quem procurava atendimento entender quem ela era antes de marcar
-                                        uma consulta. Entrei em contato oferecendo o projeto, ela topou na
-                                        hora. Levantei o conteúdo a partir do que ela já compartilhava
-                                        publicamente e organizei em seções claras, com formulário de
-                                        agendamento e botão fixo de WhatsApp pra
-                                        encurtar o caminho até a primeira sessão.
-                                    </p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://psicologa-flavia.netlify.app/" target="_blank">&gt; Ver Projeto ↗</a>
-                                    <a href="https://github.com/Irisabispo/psicologa-flavia" target="_blank">&gt; Ver GitHub ↗</a>
-                                </div>
+                            <div class="card-links">
+                                <a href="https://psicologa-flavia.netlify.app/" target="_blank">&gt; Ver Projeto ↗</a>
+                                <a href="https://github.com/Irisabispo/psicologa-flavia" target="_blank">&gt; Ver GitHub ↗</a>
                             </div>
-                        </article>
+                    </div>
+                </article>
                             <!--QUANDO TIVER UM SEGUNDO PROJETO, COLOQUE O CONTEÚDO DENTRO DESSE ARTICLE ABAIXO-->
                         <!--<article class="projeto-card">
                             <div class="card-header">
@@ -240,49 +129,89 @@
                                 </div>
                             </div>
                         </article>-->
-                    </div>
-            </section>
+                </div>
+        </section>
+
+        <!--sobre-->
+    <section id="sobre" class="sobre">
+        <h2>Sobre <span class="destaque">{ mim }</span></h2>
+                
+        <div class="skills-marquee">
+            <div class="skills-track">
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">SCSS</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">GitHub</span>
+                <span class="skill-item">Netlify</span>
+                <span class="skill-item">Vercel</span>
+                <span class="skill-item">VS Code</span>
+
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">SCSS</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">GitHub</span>
+                <span class="skill-item">Netlify</span>
+                <span class="skill-item">Vercel</span>
+                <span class="skill-item">VS Code</span>
+
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">SCSS</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">GitHub</span>
+                <span class="skill-item">Netlify</span>
+                <span class="skill-item">Vercel</span>
+                <span class="skill-item">VS Code</span>
+            </div>
+        </div>
+
+        <div class="sobre-texto">
+        <p>
+            Sou a Iris, estudante de Análise e Desenvolvimento de Sistemas.
+            Estou construindo meu caminho na tecnologia através dos estudos e, principalmente, de projetos que me ajudam a transformar o que aprendo em prática.
+            Tenho interesse pelo desenvolvimento web e gosto especialmente de unir código, organização e criatividade para criar coisas que realmente façam sentido.
+            Ainda estou descobrindo em qual área quero me especializar, então meu momento hoje é de explorar, aprender e construir. Cada projeto é uma oportunidade de entender um pouco mais sobre desenvolvimento e sobre o tipo de profissional que quero me tornar.
+            Estou no começo da minha jornada, mas estou levando esse processo a sério.
+        </p>
+    </div>
+    <div class="sobre-bloco">
+    <h3>Fora do { código }</h3>
+    <p>
+        Quando não estou estudando ou desenvolvendo algum projeto, gosto de voltar
+        para as coisas que fazem parte de mim: papelaria e colagens, livros de
+        romance, séries e jogos.
+        São pequenos hobbies que gosto de ter por perto e que acabam alimentando
+        meu lado criativo de outras formas.
+    </p>
+</div>
+
+    <div class="status-bar">
+        <span class="status-pill">Disponível para trabalho freelance</span>
+        <span class="status-pill">Aberta para colaborações</span>
+        <span class="status-pill">Sempre em busca de aprender mais</span>
+    </div>
+
+    <div class="sobre-bloco">
+        <h3>O que eu estou { aprontando } agora?</h3>
+        <p>
+            <!-- seus projetos atuais reais aqui -->
+        </p>
+    </div>
+</section>        
+
 <!--CONTATO - essa seção é o ponto final do portfolio-->
 <section id="contato" class="contato">
     <!--container central-->
     <div class="contato__container">
         <!--card principal-->
         <article class="contato__card">
-        <ul class="contato__status">
-            <li>
-                <span class="status-dot"></span>
-                Disponível para trabalho freelance
-            </li>
-            <li>
-                <span class="status-dot"></span>
-                Aberta para colaborações
-            </li>
-        </ul>
+        
         <nav class="contato__links">
-            <!--meu github-->
-            <a class="contato__link contato__link--github" 
-                href="https://github.com/Irisabispo" target="_blank" rel="noopener noreferrer">
-                <div>
-                    <strong>GitHub</strong>
-                    <small>Explore meus repositórios</small>
-                </div>
-                <div class="contato__icone">
-                    <i class="ph ph-github-logo"></i>
-                </div>
-            </a>
-            <!--meu linkedin-->
-            <a class="contato__link contato__link--linkedin"
-                href="https://www.linkedin.com/in/iris-bispo/"
-                target="_blank"
-                rel="noopener noreferrer">
-                <div>
-                    <strong>LinkedIn</strong>
-                    <small>Minha tragetória Profissional</small>
-                </div>
-                <div class="contato__icone">
-                    <i class="ph ph-linkedin-logo"></i>
-                </div>
-            </a>
             <!--meu email-->
             <a class="contato__link contato__link--email"
             href="mailto:irisabispo@gmail.com"
