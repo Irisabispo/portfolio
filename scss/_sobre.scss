@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-.sobre {
+.sobre-mim {
     padding: 4rem 2rem;
     text-align: center;
 
@@ -11,6 +11,14 @@
         margin-bottom: 2rem;
 
         .destaque { color: $cor-destaque; }
+    }
+
+    .sobre-mim-texto p {
+        max-width: 700px;
+        margin: 0 auto 4rem;
+        font-family: $fonte-texto;
+        line-height: 1.7;
+        color: var(--texto);
     }
 
     .skills-marquee {
@@ -41,14 +49,6 @@
         to   { transform: translateX(-50%); }
     }
 
-    .sobre-texto p {
-        max-width: 700px;
-        margin: 0 auto 2rem;
-        font-family: $fonte-texto;
-        line-height: 1.7;
-        color: var(--texto);
-    }
-
     .status-bar {
         display: flex;
         flex-wrap: wrap;
@@ -67,9 +67,9 @@
         border: 1px solid rgba($cor-destaque, 0.4);
     }
 
-    .sobre-bloco {
+    .sobre-mim-bloco {
         max-width: 700px;
-        margin: 3rem auto 0;
+        margin: 5rem auto 0;
         text-align: center;
 
         h3 {

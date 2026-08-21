@@ -45,9 +45,11 @@
     
     .hero-saudacao {
         font-family: $fonte-texto;
+        font-size: 1.3rem;
         color: var(--texto);
         opacity: 0.8;
         margin-bottom: 0.3rem;
+        text-align: left;
     }
     
     .hero-nome {

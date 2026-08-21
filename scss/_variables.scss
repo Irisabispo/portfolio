@@ -20,10 +20,10 @@ $fonte-codigo:'Source Code Pro', monospace;
     --titulo: #{$cor-destaque};
 }
 
-html[data-theme="light"] {
+body.theme-light {
     --bg: #ffffff;
     --texto: #141414;
-    // --titulo não muda aqui de propósito — é o que você pediu
+
 }
 
 body {

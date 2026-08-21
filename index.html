@@ -55,7 +55,14 @@
             <div class="hero-conteudo">
                 <div class="avatar-wrapper">
                     <span class="avatar-pulso"></span>
-                    <img src="./assets/images/portfolio.png" alt="Foto de Iris Bispo" class="avatar-foto">
+                    <img 
+                        src="./assets/images/portfolio.png" 
+                        alt="Foto de Iris Bispo" 
+                        class="avatar-foto"
+                        width="1254"
+                        height="1254"
+                        loading="eager"
+                    >
                 </div>
                 <p class="hero-saudacao">Olá, eu sou</p>
                 <h1 class="hero-nome">Iris Bispo</h1>
@@ -86,7 +93,14 @@
                         <span class="card-filename">psicologa-flavia.netlify.app</span>
                     </div>
                     <div class="card-body">
-                        <img src="./assets/images/landing-page-psi.webp" alt="Preview Landing Page Flávia" class="card-preview">
+                        <img 
+                            src="./assets/images/landing-page-flavia.webp" 
+                            alt="Preview Landing Page Flávia" 
+                            class="card-preview" 
+                            width="1020" 
+                            height="679"
+                            loading="lazy"
+                        >
                             <p class="comentario">// Landing Page - Psicóloga Flávia</p>
                             <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS']</span>;</p>
                             <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'Netlify'</span>;</p>
@@ -107,36 +121,53 @@
                             </div>
                     </div>
                 </article>
-                            <!--QUANDO TIVER UM SEGUNDO PROJETO, COLOQUE O CONTEÚDO DENTRO DESSE ARTICLE ABAIXO-->
-                        <!--<article class="projeto-card">
+
+                        <article class="projeto-card">
                             <div class="card-header">
                                 <span class="dot vermelho"></span>
                                 <span class="dot amarelo"></span>
                                 <span class="dot verde"></span>
-                                <span class="card-filename">......</span>
+                                <span class="card-filename">https://irisabispo.github.io/projeto-gta/</span>
                             </div>
                             <div class="card-body">
-                                <img src="./assets/images/......" alt="......" class="card-preview">
-                                <p class="comentario">// ......</p>
-                                <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS']</span>;</p>
-                                <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'Netlify'</span>;</p>
+                                <img 
+                                    src="./assets/images/projeto-gta.webp" 
+                                    alt="preview da landing page do projeto GTA" 
+                                    class="card-preview"
+                                    loading="lazy"
+                                    width="1150"
+                                    height="845"
+                                >
+                                <p class="comentario">// Projeto Clone da Landing Page do GTA VI</p>
+                                <p class="codigo"><span class="roxo">const</span> stack = <span class="rosa">['HTML', 'CSS', 'JS', 'GSAP']</span>;</p>
+                                <p class="codigo"><span class="roxo">const</span> deploy = <span class="verde-texto">'GitHub Pages'</span>;</p>
                                 <div class="card-descricao">
-                                    <p>...... </p>
+                                    <p>
+                                        Landing page inspirada no GTA VI, com animações controladas pelo scroll usando GSAP e ScrollTrigger e efeitos de entrada com IntersectionObserver. Como implementação adicional, desenvolvi um modal interativo para reprodução do trailer e adicionei links para minhas redes e site no rodapé.
+                                    </p>
                                 </div>
                                 <div class="card-links">
-                                    <a href="......" target="_blank">&gt; Ver Projeto ↗</a>
-                                    <a href="......" target="_blank">&gt; Ver GitHub ↗</a>
+                                    <a href="https://irisabispo.github.io/projeto-gta/" target="_blank">&gt; Ver Projeto ↗</a>
+                                    <a href="https://github.com/Irisabispo/projeto-gta" target="_blank">&gt; Ver GitHub ↗</a>
                                 </div>
                             </div>
-                        </article>-->
+                        </article>
                 </div>
         </section>
 
         <!--sobre-->
-    <section id="sobre" class="sobre">
+    <section id="sobre" class="sobre-mim">
         <h2>Sobre <span class="destaque">{ mim }</span></h2>
-                
-        <div class="skills-marquee">
+        <div class="sobre-mim-texto">
+        <p>
+            Sou a Iris, estudante de Análise e Desenvolvimento de Sistemas.
+            Estou construindo meu caminho na tecnologia através dos estudos e, principalmente, de projetos que me ajudam a transformar o que aprendo em prática.
+            Tenho interesse pelo desenvolvimento web e gosto especialmente de unir código, organização e criatividade para criar coisas que realmente façam sentido.
+            Ainda estou descobrindo em qual área quero me especializar, então meu momento hoje é de explorar, aprender e construir. Cada projeto é uma oportunidade de entender um pouco mais sobre desenvolvimento e sobre o tipo de profissional que quero me tornar.
+            Estou no começo da minha jornada, mas estou levando esse processo a sério.
+        </p>
+    </div>
+    <div class="skills-marquee">
             <div class="skills-track">
                 <span class="skill-item">HTML</span>
                 <span class="skill-item">CSS</span>
@@ -170,16 +201,7 @@
             </div>
         </div>
 
-        <div class="sobre-texto">
-        <p>
-            Sou a Iris, estudante de Análise e Desenvolvimento de Sistemas.
-            Estou construindo meu caminho na tecnologia através dos estudos e, principalmente, de projetos que me ajudam a transformar o que aprendo em prática.
-            Tenho interesse pelo desenvolvimento web e gosto especialmente de unir código, organização e criatividade para criar coisas que realmente façam sentido.
-            Ainda estou descobrindo em qual área quero me especializar, então meu momento hoje é de explorar, aprender e construir. Cada projeto é uma oportunidade de entender um pouco mais sobre desenvolvimento e sobre o tipo de profissional que quero me tornar.
-            Estou no começo da minha jornada, mas estou levando esse processo a sério.
-        </p>
-    </div>
-    <div class="sobre-bloco">
+    <div class="sobre-mim-bloco">
     <h3>Fora do { código }</h3>
     <p>
         Quando não estou estudando ou desenvolvendo algum projeto, gosto de voltar

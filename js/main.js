@@ -100,20 +100,6 @@ function reiniciarTerminal() {
     boardText.textContent = ""; //limpa o <p> na tela
     digitar(); //começa tudo novamente
 }
-//efeito dos cards**
-// a luz quando o mouse passa nos cards de habilidades
-const cards = document.querySelectorAll(".skill-card");
-
-cards.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        card.style.setProperty("--x", `${x}px`);
-        card.style.setProperty("--y", `${y}px`);
-    }); 
-
-});
 
 //ano dinâmico do footer**
 document.getElementById("year").textContent = new Date().getFullYear();
