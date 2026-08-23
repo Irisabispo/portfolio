@@ -90,8 +90,207 @@
     }
 }
 
+.projeto-atual {
+    max-width: 700px;
+    margin: 5rem auto 0;
+    text-align: center;
+
+    h2 {
+        font-family: $fonte-titulo;
+        font-size: clamp(2.2rem, 10vw, 2.8rem);
+        color: var(--titulo);
+        margin-bottom: 2rem;
+
+        .destaque {
+            color: $cor-destaque;
+        }
+    }
+    
+    .projeto-card {
+        position: relative;
+        overflow: hidden;
+
+        padding: 2rem;
+        text-align: left;
+
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba($cor-destaque, 0.22);
+        border-radius: 1.2rem;
+
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.18),
+            inset 0 0 30px rgba($cor-destaque, 0.025);
+
+        isolation: isolate;
+
+        // brilho interno
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+
+            width: 14rem;
+            height: 14rem;
+
+            top: -7rem;
+            left: -4rem;
+
+            background: radial-gradient(
+                circle,
+                rgba($cor-destaque, 0.12) 0%,
+                rgba($cor-destaque, 0.04) 35%,
+                transparent 70%
+            );
+
+            filter: blur(10px);
+
+            animation: projeto-brilho 8s ease-in-out infinite alternate;
+        }
+
+        // pequeno reflexo na borda
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+
+            width: 10rem;
+            height: 10rem;
+
+            right: -5rem;
+            bottom: -6rem;
+
+            background: radial-gradient(
+                circle,
+                rgba($cor-destaque, 0.06) 0%,
+                transparent 70%
+            );
+
+            filter: blur(15px);
+
+            animation: projeto-brilho-secundario 10s ease-in-out infinite alternate;
+        }
+    }
+
+    .projeto-status {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        padding: 0.3rem 0.55rem;
+
+        border: 1px solid rgba($cor-destaque, 0.2);
+        border-radius: 999px;
+
+        font-family: $fonte-codigo;
+        font-size: 0.65rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        color: var(--texto);
+        opacity: 0.65;
+    }
+
+    .status-ponto {
+        width: 0.35rem;
+        height: 0.35rem;
+
+        border-radius: 50%;
+        background: $cor-destaque;
+
+        box-shadow: 0 0 8px rgba($cor-destaque, 0.6);
+    }
+
+    .projeto-card-conteudo {
+        position: relative;
+        z-index: 1;
+
+        padding-top: 1rem;
+    }
+
+    .projeto-label {
+        display: inline-block;
+        margin-bottom: 0.7rem;
+
+        font-family: $fonte-codigo;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+
+        color: $cor-destaque;
+        opacity: 0.8;
+    }
+
+    h3 {
+        margin-bottom: 0.4rem;
+
+        font-family: $fonte-titulo;
+        font-size: 1.8rem;
+
+        color: var(--titulo);
+    }
+
+    .projeto-meta {
+        display: block;
+        margin-bottom: 1.2rem;
+
+        font-family: $fonte-codigo;
+        font-size: 0.75rem;
+        line-height: 1.6;
+
+        color: var(--texto);
+        opacity: 0.6;
+    }
+
+    p {
+        max-width: 620px;
+
+        font-family: $fonte-texto;
+        line-height: 1.7;
+
+        color: var(--texto);
+    }
+}
+
+@keyframes projeto-brilho {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translate(18rem, 5rem) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(32rem, 1rem) scale(0.9);
+        opacity: 0.6;
+    }
+}
+
+@keyframes projeto-brilho-secundario {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate(-8rem, -5rem);
+        opacity: 0.8;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
+
     .skills-track {
+        animation: none;
+    }
+
+    .projeto-card::before,
+    .projeto-card::after {
         animation: none;
     }
 }

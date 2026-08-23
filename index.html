@@ -240,52 +240,46 @@
     <h3>Fora do { código }</h3>
     <p>
         Quando não estou estudando ou desenvolvendo algum projeto, gosto de voltar
-        para as coisas que fazem parte de mim: papelaria e colagens, livros de
-        romance, séries e jogos.
+        para as coisas que fazem parte de mim: papelaria e colagens, leitura, séries e filmes de romance.
         São pequenos hobbies que gosto de ter por perto e que acabam alimentando
         meu lado criativo de outras formas.
     </p>
 </div>
-
-
-    <!--<div class="sobre-bloco">
-        <h3>O que eu estou { aprontando } agora?</h3>
-        <p>....</p>
-    </div>-->
-</section>        
-
-<section id="contato" class="contato">
-    <div class="contato__container">
-        <!--card principal-->
-        <article class="contato__card">
-        <nav class="contato__links">
-            <a class="contato__link contato__link--email"
-            href="mailto:irisabispo@gmail.com"
-            >
-            <div>
-        
-            <small>Vamos Conversar</small>
-            </div>
-            <div class="contato__icone">
-                <i class="ph ph-envelope-simple"></i>
-            </div>
-            </a>
-            <!--meu whatsapp-->
-            <a class="contato__link contato__link--whatsapp" 
-                href="https://wa.me/5567998371962"
-                target="_blank" rel="noopener noreferrer"
-                >
-            <div>
-                <small>Respondo o mais rápido possível</small>
-            </div>
-            <div class="contato__icone">
-                <i class="ph ph-whatsapp-logo"></i>
-            </div>
-            </a>
-        </nav>
-        </article>
-    </div>
 </section>
+
+<div class="projeto-atual">
+    <h2>
+        o que eu estou <span class="destaque">{ aprontando }</span> agora?
+    </h2>
+
+    <div class="projeto-card">
+            
+        <div class="projeto-status">
+            <span class="status-ponto" aria-hidden="true"></span>
+            <span>Em andamento</span>
+        </div>
+
+        <div class="projeto-card-conteudo">
+            <span class="projeto-label">
+                PROJETO PRIVADO
+            </span>
+    
+            <h3>produto digital privado</h3>
+
+            <span class="projeto-meta">
+                Trabalho em equipe · UI & Experiência digital
+            </span>
+        
+            <p>
+                Atualmente colaboro em um projeto privado, contribuindo
+                com ideias para modernizar interfaces e tornar a experiência
+                do produto mais atual e intuitiva. Uma experiência prática
+                de trabalho em equipe, criatividade e construção de soluções
+                para um produto real.
+            </p>
+        </div>
+    </div>
+</div>
 
 <!-- TERMINAL-->
     <section class="board"> 
@@ -293,6 +287,37 @@
             <p id="board-text"></p> <!-- js escreve as mensagens. JS vai procurar o id usando document.getElementById-->
         </div>
     </section>
+
+    <!--Contatos-->
+    <section id="contato" class="contato">
+        <h2>
+            Vamos <span class="destaque">{ conversar }</span>?
+        </h2>
+        <p>
+            Tem um projeto em mente ou quer trocar uma ideia?
+            Estou por aqui.
+        </p>
+    <div class="contato__links">
+        <a 
+            class="contato__link contato__link--email"
+            href="mailto:irisabispo@gmail.com"
+        >
+            <i class="ph ph-envelope-simple" aria-hidden="true"></i>
+            <span>Enviar um e-mail</span>
+        </a>
+        <a
+            class="contato__link contato__link--whatsapp"
+            href="https://wa.me/5567998371962"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+            <span>Falar pelo WhatsApp</span>
+        </a>
+
+    
+    </div>
+</section>
 
     <!--FOOTER-->
     <footer>
