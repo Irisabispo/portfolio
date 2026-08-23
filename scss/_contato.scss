@@ -1,90 +1,34 @@
 @use 'variables' as *;
 
 .contato {
-    //espaço 8 em cima e embaixo e 2 nas laterais
     padding: 8rem 2rem;
     color: $cor-principal;
-    //necessario para posicionar elementos absolutos
     position: relative;
-    //nada pode vazar da seção
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .contato__container {
-    //100% usa toda a tela
     width: 100%;
-    //max nunca passa disso
     max-width: 1200px;
-    //margin centraliza
     margin: auto;
 }
 
 .contato__card {
     max-width: 850px;
     margin: auto;
-    //o espaço interno
     padding: 3rem;
-    //arredondar os cantinhos
     border-radius: 24px;
-    //fundo translúcido
     background: rgba(255, 255, 255, .05);
-    //efeito de vidro
     backdrop-filter: blur(16px);
-    //compatibilidade safari
     -webkit-backdrop-filter: blur(16px);
-    //bordinha bem sutil
     border: 1px solid rgba(255, 255, 255, .08);
-    //sombra bem suave
     box-shadow: 0 15px 50px rgba(0, 0, 0, .25);
-
 }
 
-.contato__descricao {
-    //ch é o tamanho médio de um caractere, 55 caracteres
-    max-width: 55ch;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-    color: #d4b8a0;
-}
-
-.contato__status {
-    list-style: none;
+.contato__links {
     display: flex;
-    flex-direction: column;
-    gap: .9rem;
-    margin-bottom: 2rem;
-    padding: 0;
-
-
-}
-
-.contato__status li {
-    display: flex;
-    align-items: center;
-    gap: .8rem;
-}
-
-.status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #e486ee;
-    flex-shrink: 0;
-    animation: pulse 2s infinite;
-}
-//usuarios que preferem reduzir movimentos
-@media (prefers-reduced-motion: reduce) {
-    .status-dot {
-        animation: none;
-    }
-}
-
-.contat__links {
-    display: flex;
-
     flex-direction: column;
     gap: 1rem;
-
 }
 
 .contato__link {
@@ -98,23 +42,13 @@
     background: rgba(255, 255, 255, .04);
     border: 1px solid rgba(255, 255, 255, .08);
     transition: .35s ease;
-
     cursor: pointer;
 }
 
 .contato__link:hover {
     transform: translateY(-6px);
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
-
     border-color: rgba(255, 120, 220, .35);
-}
-
-
-.contato__link strong {
-    display: block;
-    margin-bottom: .35rem;
-    font-size: 1rem;
 }
 
 .contato__link small {
@@ -122,20 +56,11 @@
     font-size: .88rem;
 }
 
-.contato__link span {
-    font-size: 1.3rem;
-    transition: .35s;
-}
-.contato__link:hover span {
-    transform: translateX(6px);
-}
-
 .contato__link:focus-visible {
     outline: 2px solid rgba(255, 120, 220, .7);
     outline-offset: 4px;
 }
 
-//icones
 .contato__icone {
     width: 48px;
     height: 48px;
@@ -150,28 +75,12 @@
 
 .contato__icone i {
     font-size: 1.4rem;
-    
-}
-
-.contato__link--github:hover {
-    border-color: #7d8590;
-}
-.contato__link--github:hover .contato__icone {
-    background: #24292f;
-    color: #ffffff;
-}
-
-.contato__link--linkedin:hover {
-    border-color: #0a66c2;
-}
-.contato__link--linkedin:hover .contato__icone {
-    background: #0a66c2;
-    color: #ffffff;
 }
 
 .contato__link--email:hover {
     border-color: #ff79c6;
 }
+
 .contato__link--email:hover .contato__icone {
     background: #ff79c6;
     color: #ffffff;
@@ -180,11 +89,30 @@
 .contato__link--whatsapp:hover {
     border-color: #25d366;
 }
+
 .contato__link--whatsapp:hover .contato__icone {
     background: #25d366;
     color: #ffffff;
 }
-//rotação dos icones be sútil
+
 .contato__link:hover .contato__icone {
     transform: rotate(-8deg) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contato__link {
+        transition: none;
+    }
+
+    .contato__link:hover {
+        transform: none;
+    }
+
+    .contato__link:hover .contato__icone {
+        transform: none;
+    }
+
+    .status-dot {
+        animation: none;
+    }
 }
