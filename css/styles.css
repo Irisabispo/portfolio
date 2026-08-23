@@ -657,7 +657,7 @@ p {
     font-size: 0.82rem;
   }
   .projetos .projeto-card .card-body .card-links {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 0.75rem 1.5rem;
   }
