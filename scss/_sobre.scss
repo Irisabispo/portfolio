@@ -1,256 +1,246 @@
 @use 'variables' as *;
 
 .sobre-mim {
-    padding: 4rem 2rem;
+    padding: 4rem 1.25rem;
     text-align: center;
 
     h2 {
+        margin-bottom: 2rem;
+        color: var(--titulo);
         font-family: $fonte-titulo;
         font-size: clamp(2.2rem, 10vw, 2.8rem);
-        color: var(--titulo);
-        margin-bottom: 2rem;
-
-        .destaque { 
-            color: $cor-destaque; 
-        }
-    }
-
-    .sobre-mim-texto p {
-        max-width: 700px;
-        margin: 0 auto 4rem;
-        font-family: $fonte-texto;
-        line-height: 1.7;
-        color: var(--texto);
-    }
-
-    .skills-marquee {
-        overflow: hidden;
-        width: 100%;
-        margin: 2rem 0;
-        mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-        -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-    }
-
-    .skills-track {
-        display: flex;
-        gap: 3rem;
-        width: max-content;
-        animation: rolar 20s linear infinite;
-    }
-
-    .skill-item {
-        font-family: $fonte-codigo;
-        font-size: 1.2rem;
-        color: var(--texto);
-        white-space: nowrap;
-        opacity: 0.7;
-    }
-
-    @keyframes rolar {
-        from { transform: translateX(0); }
-        to   { transform: translateX(-50%); }
-    }
-
-    .status-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        justify-content: center;
-        margin-bottom: 3rem;
-    }
-
-    .status-pill {
-        font-family: $fonte-texto;
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
-        border-radius: 999px;
-        background: $fundo-cinza;
-        color: var(--texto);
-        border: 1px solid rgba($cor-destaque, 0.4);
-    }
-
-    .sobre-mim-bloco {
-        max-width: 700px;
-        margin: 5rem auto 0;
-        text-align: center;
-
-        h3 {
-            font-family: $fonte-titulo;
-            color: var(--titulo);
-            font-size: clamp(2.2rem, 10vw, 2.8rem);
-            margin-bottom: 1rem;
-            
-        }
-
-        p {
-            font-family: $fonte-texto;
-            line-height: 1.7;
-            color: var(--texto);
-        }
-    }
-}
-
-.projeto-atual {
-    max-width: 700px;
-    margin: 5rem auto 0;
-    text-align: center;
-
-    h2 {
-        font-family: $fonte-titulo;
-        font-size: clamp(2.2rem, 10vw, 2.8rem);
-        color: var(--titulo);
-        margin-bottom: 2rem;
 
         .destaque {
             color: $cor-destaque;
         }
     }
-    
+
+    .sobre-mim-texto p {
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        color: var(--texto);
+        font-family: $fonte-texto;
+        line-height: 1.7;
+    }
+
+    .skills-marquee {
+        width: 100%;
+        margin: 2rem 0;
+        overflow: hidden;
+        mask-image: linear-gradient(
+            90deg,
+            transparent,
+            #000 10%,
+            #000 90%,
+            transparent
+        );
+        -webkit-mask-image: linear-gradient(
+            90deg,
+            transparent,
+            #000 10%,
+            #000 90%,
+            transparent
+        );
+    }
+
+    .skills-track {
+        display: flex;
+        gap: 2rem;
+        width: max-content;
+        animation: rolar 20s linear infinite;
+    }
+
+    .skill-item {
+        color: var(--texto);
+        font-family: $fonte-codigo;
+        font-size: 1rem;
+        white-space: nowrap;
+        opacity: 0.7;
+    }
+
+    .status-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-bottom: 3rem;
+    }
+
+    .status-pill {
+        padding: 0.5rem 0.85rem;
+        border: 1px solid rgba($cor-destaque, 0.4);
+        border-radius: 999px;
+        background: $fundo-cinza;
+        color: var(--texto);
+        font-family: $fonte-texto;
+        font-size: 0.8rem;
+    }
+
+    .sobre-mim-bloco {
+        max-width: 700px;
+        margin: 4rem auto 0;
+        text-align: center;
+
+        h3 {
+            margin-bottom: 1rem;
+            color: var(--titulo);
+            font-family: $fonte-titulo;
+            font-size: clamp(2.2rem, 10vw, 2.8rem);
+        }
+
+        p {
+            color: var(--texto);
+            font-family: $fonte-texto;
+            line-height: 1.7;
+        }
+    }
+}
+
+.projeto-atual {
+    width: 100%;
+    max-width: 700px;
+    margin: 4rem auto 0;
+    padding: 0 1.25rem;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 2rem;
+        color: var(--titulo);
+        font-family: $fonte-titulo;
+        font-size: clamp(2.2rem, 10vw, 2.8rem);
+        line-height: 1.15;
+
+        .destaque {
+            color: $cor-destaque;
+        }
+    }
+
     .projeto-card {
         position: relative;
         overflow: hidden;
-
-        padding: 2rem;
-        text-align: left;
-
-        background: rgba(255, 255, 255, 0.025);
+        padding: 1.5rem;
         border: 1px solid rgba($cor-destaque, 0.22);
         border-radius: 1.2rem;
-
+        background: rgba(255, 255, 255, 0.025);
         box-shadow:
             0 10px 35px rgba(0, 0, 0, 0.18),
             inset 0 0 30px rgba($cor-destaque, 0.025);
-
+        text-align: left;
         isolation: isolate;
 
-        // brilho interno
+        // Brilho interno
         &::before {
             content: "";
             position: absolute;
             z-index: -1;
-
-            width: 14rem;
-            height: 14rem;
-
             top: -7rem;
             left: -4rem;
-
+            width: 14rem;
+            height: 14rem;
             background: radial-gradient(
                 circle,
                 rgba($cor-destaque, 0.12) 0%,
                 rgba($cor-destaque, 0.04) 35%,
                 transparent 70%
             );
-
             filter: blur(10px);
-
             animation: projeto-brilho 8s ease-in-out infinite alternate;
         }
 
-        // pequeno reflexo na borda
+        // Reflexo secundário
         &::after {
             content: "";
             position: absolute;
             z-index: -1;
-
-            width: 10rem;
-            height: 10rem;
-
             right: -5rem;
             bottom: -6rem;
-
+            width: 10rem;
+            height: 10rem;
             background: radial-gradient(
                 circle,
                 rgba($cor-destaque, 0.06) 0%,
                 transparent 70%
             );
-
             filter: blur(15px);
-
             animation: projeto-brilho-secundario 10s ease-in-out infinite alternate;
         }
     }
 
     .projeto-status {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-
+        position: static;
         display: inline-flex;
         align-items: center;
         gap: 0.4rem;
-
+        margin-bottom: 1.2rem;
         padding: 0.3rem 0.55rem;
-
         border: 1px solid rgba($cor-destaque, 0.2);
         border-radius: 999px;
-
+        color: var(--texto);
         font-family: $fonte-codigo;
         font-size: 0.65rem;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-
-        color: var(--texto);
-        opacity: 0.65;
+        opacity: 0.7;
     }
 
     .status-ponto {
         width: 0.35rem;
         height: 0.35rem;
-
         border-radius: 50%;
         background: $cor-destaque;
-
         box-shadow: 0 0 8px rgba($cor-destaque, 0.6);
+        flex-shrink: 0;
     }
 
     .projeto-card-conteudo {
         position: relative;
         z-index: 1;
-
-        padding-top: 1rem;
     }
 
     .projeto-label {
         display: inline-block;
         margin-bottom: 0.7rem;
-
+        color: $cor-destaque;
         font-family: $fonte-codigo;
         font-size: 0.7rem;
         letter-spacing: 0.12em;
-
-        color: $cor-destaque;
         opacity: 0.8;
     }
 
     h3 {
         margin-bottom: 0.4rem;
-
-        font-family: $fonte-titulo;
-        font-size: 1.8rem;
-
         color: var(--titulo);
+        font-family: $fonte-titulo;
+        font-size: 1.6rem;
+        line-height: 1.2;
     }
 
     .projeto-meta {
         display: block;
         margin-bottom: 1.2rem;
-
-        font-family: $fonte-codigo;
-        font-size: 0.75rem;
-        line-height: 1.6;
-
         color: var(--texto);
+        font-family: $fonte-codigo;
+        font-size: 0.72rem;
+        line-height: 1.6;
         opacity: 0.6;
     }
 
     p {
         max-width: 620px;
-
+        margin: 0;
+        color: var(--texto);
         font-family: $fonte-texto;
         line-height: 1.7;
+    }
+}
 
-        color: var(--texto);
+@keyframes rolar {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }
 
@@ -283,12 +273,72 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* Tablet */
+@media (min-width: 48rem) {
+    .sobre-mim {
+        padding: 5rem 2rem;
 
-    .skills-track {
-        animation: none;
+        .skills-track {
+            gap: 3rem;
+        }
+
+        .skill-item {
+            font-size: 1.1rem;
+        }
+
+        .status-bar {
+            gap: 0.8rem;
+        }
+
+        .status-pill {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
     }
 
+    .projeto-atual {
+        margin-top: 5rem;
+        padding: 0 2rem;
+
+        .projeto-card {
+            padding: 2rem;
+        }
+
+        .projeto-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            margin-bottom: 0;
+        }
+
+        .projeto-card-conteudo {
+            padding-top: 1rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        .projeto-meta {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: 64rem) {
+    .sobre-mim {
+        padding: 6rem 2rem;
+    }
+
+    .projeto-atual {
+        margin-top: 6rem;
+    }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .skills-track,
     .projeto-card::before,
     .projeto-card::after {
         animation: none;
