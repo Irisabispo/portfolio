@@ -89,19 +89,136 @@ body.theme-light header {
 
 .menu-hamburguer {
     display: none;
-    gap: 0.5rem;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     flex-direction: column;
-    background: none;
-    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 0;
     cursor: pointer;
-    z-index: 101;
+    z-index: 102;
 
     span {
-        width: 25px;
-        height: 3px;
-        background-color: var(--button-color);
+        display: block;
+        width: 24px;
+        height: 2px;
+
+        background: var(--button-color);
         border-radius: 2px;
-        transition: all 0.3s ease;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $cor-destaque;
+        outline-offset: 4px;
+    }
+}
+
+
+.menu-principal {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem;
+    background: rgba(14, 14, 14, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--surface-border);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+    a {
+        display: block;
+        padding: 0.9rem 1rem;
+        color: var(--heading);
+        text-decoration: none;
+        border-radius: 12px;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+
+        &:hover {
+            background-color: rgba(211, 90, 157, 0.18);
+            color: var(--nav-hover);
+        }
+
+        &:focus-visible {
+            outline: 2px solid $cor-destaque;
+            outline-offset: 3px;
+        }
+    }
+
+    &.is-open {
+        display: flex;
+    }
+}
+
+/* botão transformado em X quando o menu está aberto */
+.menu-hamburguer.is-open {
+    span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+        opacity: 0;
+    }
+
+    span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* tema claro */
+body.theme-light {
+
+    .menu-principal {
+        background: rgba(255, 255, 255, 0.96);
+    }
+}
+
+
+/* desktop */
+@media (min-width: 64rem) {
+    .menu-hamburguer {
+        display: none;
+    }
+
+    .menu-principal {
+        display: none;
+    }
+}
+
+
+/* mobile e tablet */
+@media (max-width: 63.99rem) {
+    header {
+        position: sticky;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+/* usuários que preferem reduzir movimentos */
+@media (prefers-reduced-motion: reduce) {
+    .menu-hamburguer span,
+    .menu-principal a {
+        transition: none;
     }
 }
 

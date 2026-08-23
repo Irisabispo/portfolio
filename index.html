@@ -22,34 +22,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--navbar-->
-    <header> 
-        <h2 class="logo">
-            //<span class="logo-nome">IB</span>
-        </h2>
+    <!-- navbar -->
+<header>
 
-        <nav class="navbar"> 
-            <ul>
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#curriculo">Currículo</a></li>
-                <li>
-                    <button class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
-                        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
-                    </button>
-                </li>
-            </ul>
-        </nav>
-        <!--menu hamburguinho-->
-        <button class="menu-hamburguer" type="button" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <main>
+    <h2 class="logo">
+        //<span class="logo-nome">IB</span>
+    </h2>
+
+    <!-- navegação desktop -->
+    <nav class="navbar" aria-label="Navegação principal">
+        <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#curriculo">Currículo</a></li>
+
+            <li>
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Alternar tema"
+                    aria-pressed="false"
+                >
+                    <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- botão do menu mobile -->
+    <button
+        class="menu-hamburguer"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- menu mobile -->
+    <nav
+        id="menu-principal"
+        class="menu-principal"
+        aria-label="Navegação mobile"
+    >
+        <a href="#hero">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+        <a href="#curriculo">Currículo</a>
+    </nav>
+
+</header>
+<main>
         <!--hero-->
         <section id="hero" class="hero"> 
             <div class="hero-conteudo">

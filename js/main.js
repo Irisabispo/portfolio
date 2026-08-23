@@ -1,12 +1,52 @@
-//menu mobile**
-const btn = document.querySelector(".menu-hamburguer");
-const menu = document.querySelector(".navbar");
+// menu mobile
+const menuButton = document.querySelector(".menu-hamburguer");
+const mobileMenu = document.querySelector(".menu-principal");
 
-if (btn && menu) {
-    btn.addEventListener("click", () => {
-        btn.classList.toggle("ativo");
-        menu.classList.toggle("ativo");
+if (menuButton && mobileMenu) {
+
+    menuButton.addEventListener("click", () => {
+
+        const isOpen = menuButton.classList.toggle("is-open");
+
+        mobileMenu.classList.toggle("is-open", isOpen);
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Fechar menu" : "Abrir menu"
+        );
+
     });
+
+
+    // fecha o menu quando um link é clicado
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            menuButton.classList.remove("is-open");
+
+            mobileMenu.classList.remove("is-open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+        });
+
+    });
+
 }
 
 const themeToggle = document.querySelector(".theme-toggle");
