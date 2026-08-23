@@ -6,11 +6,13 @@
 
     h2 {
         font-family: $fonte-titulo;
-        font-size: 2.8rem;
+        font-size: clamp(2.2rem, 10vw, 2.8rem);
         color: var(--titulo);
         margin-bottom: 2rem;
 
-        .destaque { color: $cor-destaque; }
+        .destaque { 
+            color: $cor-destaque; 
+        }
     }
 
     .sobre-mim-texto p {
@@ -85,5 +87,11 @@
             line-height: 1.7;
             color: var(--texto);
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-track {
+        animation: none;
     }
 }

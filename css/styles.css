@@ -321,7 +321,7 @@ p {
 }
 .sobre-mim h2 {
   font-family: "Playfair Display SC", serif;
-  font-size: 2.8rem;
+  font-size: clamp(2.2rem, 10vw, 2.8rem);
   color: var(--titulo);
   margin-bottom: 2rem;
 }
@@ -396,6 +396,11 @@ p {
   color: var(--texto);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .skills-track {
+    animation: none;
+  }
+}
 @media (max-width: 768px) {
   header {
     height: 70px;
