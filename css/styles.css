@@ -166,20 +166,22 @@ p {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5rem 1.25rem 3rem;
   text-align: center;
 }
 .hero .hero-conteudo {
+  width: 100%;
   max-width: 600px;
-  padding: 2rem;
+  margin: 0 auto;
 }
 .hero .avatar-wrapper {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: clamp(180px, 55vw, 240px);
+  aspect-ratio: 1;
   margin: 0 auto 1.5rem;
 }
 .hero .avatar-foto {
@@ -187,7 +189,7 @@ p {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #f472b6;
+  border: 3px solid #f472b6;
   position: relative;
   z-index: 2;
 }
@@ -210,16 +212,18 @@ p {
   }
 }
 .hero .hero-saudacao {
+  margin: 0 0 0.3rem;
   font-family: "DM Sans", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--texto);
   opacity: 0.8;
-  margin-bottom: 0.3rem;
-  text-align: left;
+  text-align: center;
 }
 .hero .hero-nome {
+  margin: 0;
   font-family: "Playfair Display SC", serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 12vw, 4.5rem);
+  line-height: 1;
   background: linear-gradient(90deg, #f472b6, #f7b0fa, #f472b6);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -233,34 +237,84 @@ p {
   }
 }
 .hero .hero-cargo {
+  margin: 0.75rem auto 1.75rem;
+  max-width: 32rem;
   font-family: "DM Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--texto);
-  margin: 0.5rem 0 2rem;
 }
 .hero .hero-botoes {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 18rem;
+  margin: 0 auto;
 }
 .hero .btn-social {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.4rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.25rem;
+  border: 2px solid #f472b6;
   border-radius: 999px;
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
   text-decoration: none;
-  border: 2px solid #f472b6;
   color: #f472b6;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 .hero .btn-social:hover {
   background: #f472b6;
   color: #0e0e0e;
+  transform: translateY(-2px);
 }
 
+/* TABLETS */
+@media (min-width: 48rem) {
+  .hero {
+    padding-inline: 2rem;
+  }
+  .hero .avatar-wrapper {
+    width: 280px;
+  }
+  .hero .hero-saudacao {
+    font-size: 1.15rem;
+    text-align: left;
+  }
+  .hero .hero-cargo {
+    font-size: 1.1rem;
+  }
+  .hero .hero-botoes {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+  }
+}
+/* DESKTOP */
+@media (min-width: 64rem) {
+  .hero {
+    padding-inline: 2rem;
+  }
+  .hero .avatar-wrapper {
+    width: 320px;
+  }
+  .hero .hero-saudacao {
+    font-size: 1.3rem;
+  }
+  .hero .hero-cargo {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .hero .btn-social {
+    padding-inline: 1.4rem;
+  }
+}
 .sobre-mim {
   padding: 4rem 2rem;
   text-align: center;
