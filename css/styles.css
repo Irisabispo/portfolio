@@ -907,27 +907,41 @@ p {
 }
 footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
   background-color: #f472b6;
-  margin-top: 10rem;
-  padding: 4rem 8%;
-  /*.footer-direitos {
-      color: $cor-principal;
-      font-size: 1rem;
-      text-align: center;
-  }*/
+  margin-top: 6rem;
+  padding: 3rem 1.5rem;
 }
-footer .icons {
-  display: flex;
-  gap: 2rem;
+
+.footer-direitos {
+  color: #0e0e0e;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .footer__signature {
-  margin-top: 1 rem;
+  margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 8%;
+  }
+  .footer-direitos {
+    font-size: 1rem;
+  }
+  .footer__signature {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
